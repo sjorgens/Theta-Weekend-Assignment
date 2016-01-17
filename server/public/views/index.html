@@ -2,15 +2,31 @@
 <html lang="en" ng-app="serviceApp">
 <head>
     <meta charset="UTF-8">
-    <title>Angular Services</title>
-    <!--<link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">-->
+    <title>Angular Services Project</title>
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
     <script src="/vendor/angular/angular.min.js"></script>
     <script src="/assets/scripts/client.min.js"></script>
 </head>
 <body ng-controller="mainController">
-    <h2>Angular services are running . . .</h2>
-    <div ng-repeat="user in users">
-        <p>Avatar URL: {{user.actor.avatar_url}}</br>User Name: {{user.actor.login}}</br>Repo Name: {{user.repo.name}}</br></p>
+    <div class="jumbotron">
+      <h1>~Theta Weekend Services Assignment~</h1>
+    </div>
+    <div class="page-header">
+        <h3>Here is some random repository data from GitHub users in the Theta cohort at Prime Academy.</h3>
+        <p>(refresh to see another username)</p>
+    </div>
+    <div class="well col-md-4" ng-repeat="user in users">
+        <p>
+            <span>
+                <img class="img-thumbnail" src="{{user.actor.avatar_url}}" alt="Username {{user.actor.login}} avatar"/></br>
+                User Name: {{user.actor.login}}</br>
+                ID: {{user.id}}</br>
+                Created: {{user.created_at}}</br>
+                Repo Name: {{user.repo.name}}</br>
+                Repo ID: {{user.repo.id}}</br>
+                Action Type: {{user.type}}
+            </span>
+        </p>
     </div>
 </body>
 </html>
