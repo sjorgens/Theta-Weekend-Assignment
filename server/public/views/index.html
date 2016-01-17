@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="serviceApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Services</title>
+    <!--<link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">-->
+    <script src="/vendor/angular/angular.min.js"></script>
+    <script src="/assets/scripts/client.min.js"></script>
+</head>
+<body ng-controller="mainController">
+    <h2>Angular services are running . . .</h2>
+    <div ng-repeat="user in users">
+        <p>Avatar URL: {{user.actor.avatar_url}}</br>User Name: {{user.actor.login}}</br>Repo Name: {{user.repo.name}}</br></p>
+    </div>
+</body>
+</html>
